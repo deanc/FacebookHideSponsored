@@ -45,9 +45,5 @@ function hideSponsored() {
    });
 
    // hide sidebar ads
-   $("div[data-ad]").each(function () {
-       $(this).remove();
-   });
-
-   $("[data-adblock-hash]").remove();
+  // $("[data-adblock-hash]").remove();
 }
