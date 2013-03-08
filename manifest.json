@@ -9,5 +9,5 @@
     "description": "Hides sponsored stories from your Facebook news feed",
     "manifest_version": 2,
     "name": "Hide Facebook sponsored stories",
-    "version": "2.1"
+    "version": "2.2"
 }

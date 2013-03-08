@@ -33,17 +33,29 @@ $(document).ready(function () {
     }
 });
 
+var hideTimer = null;
 function hideSponsored() {
     
     // hide news feed sponsored stories
    var items = $('a[href="/about/ads"]');
-   console.log(items.length);
 
    items.each(function () {
         $(this).closest(".uiStreamStory").remove();
         console.log("remove a sponsored story");
    });
 
+    hideTimer = setTimeout(function () {
+        hideSponsored();
+    }, 2000);
+
    // hide sidebar ads
   // $("[data-adblock-hash]").remove();
+}
+
+window.onblur = function () {
+    clearTimeout(hideTimer);
+}
+
+window.onfocus = function () {
+    hideSponsored();
 }
